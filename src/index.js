@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Button from "./components/Button/Button";
+import ButtonsGroup from "./components/ButtonsGroup/ButtonsGroup";
 
 const App = () => {
   return (
@@ -29,6 +30,15 @@ const App = () => {
         <h2>Доп параметры</h2>
         <Button disabled={true}>disabled</Button>
       </div>
+
+      <div>
+        <h2>Группировака комнонентов (ButtonsGroup)</h2>
+        <ButtonsGroup>
+          <Button>Left</Button>
+          <Button>Middle</Button>
+          <Button>Rigth</Button>
+        </ButtonsGroup>
+      </div> 
     </div>
   )
 }
