@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import './style.css';
 
-const Button = ({ children, mode, size, ...props }) => {
+const Button = ({ children, mode, size, counter, ...props }) => {
   const className = classnames(
     'Button',
     {
@@ -13,17 +13,24 @@ const Button = ({ children, mode, size, ...props }) => {
     }
   )
   
-  return <button className={className} {...props}>{children}</button>;
+  return  (
+    <button className={className} {...props}>
+      {children}
+      {typeof counter === 'number' && <span className='Button__counter'>{counter}</span>}
+    </button>
+  );
 }
 
 Button.defaultProps = {
   mode: 'primary',
   size: 'normal',
+  counter: null,
 }
 
 Button.propTypes = {
   mode: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger']),
   size: PropTypes.oneOf(['small', 'normal', 'extra']),
+  counter: PropTypes.number,
 }
 
 export default Button;

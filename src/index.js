@@ -7,22 +7,27 @@ const App = () => {
   return (
     <div>
       <div>
+        <h2>Типы кнопок</h2>
         <Button>Normal</Button>
         <Button mode={'secondary'}>Secondary</Button>
         <Button mode={'success'}>Success</Button>
         <Button mode={'danger'}>Danger</Button>
       </div>
       <div>
+        <h2>Размеры кнопок</h2>
         <Button>Normal</Button>
         <Button size={'small'}>small</Button>
         <Button size={'normal'}>normal</Button>
         <Button size={'extra'}>extra</Button>
       </div>
       <div>
-        <Button disabled={true}>Normal</Button>
-        <Button size={'small'} disabled={true}>small</Button>
-        <Button size={'normal'} disabled={true}>normal</Button>
-        <Button size={'extra'} disabled={true}>extra</Button>
+        <h2>Счётчик в кнопке</h2>
+        <Button counter={42}>Счётчик</Button>
+        <Button counter={0}>Счётчик</Button>
+      </div>
+      <div>
+        <h2>Доп параметры</h2>
+        <Button disabled={true}>disabled</Button>
       </div>
     </div>
   )

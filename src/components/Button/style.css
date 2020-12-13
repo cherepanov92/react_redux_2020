@@ -51,3 +51,11 @@
   font-size: 1.25rem;
   border-radius: .3rem;
 }
+
+.Button__counter {
+  background-color: #fff;
+  margin-left: 5px;
+  padding: 2px;
+  border-radius: 3px;
+  color: black;
+}
