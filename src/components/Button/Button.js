@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import './style.css';
 
-const Button = ({ children, mode, size }) => {
+const Button = ({ children, mode, size, ...props }) => {
   const className = classnames(
     'Button',
     {
@@ -13,7 +13,7 @@ const Button = ({ children, mode, size }) => {
     }
   )
   
-  return <button className={className}>{children}</button>;
+  return <button className={className} {...props}>{children}</button>;
 }
 
 Button.defaultProps = {

@@ -18,6 +18,12 @@ const App = () => {
         <Button size={'normal'}>normal</Button>
         <Button size={'extra'}>extra</Button>
       </div>
+      <div>
+        <Button disabled={true}>Normal</Button>
+        <Button size={'small'} disabled={true}>small</Button>
+        <Button size={'normal'} disabled={true}>normal</Button>
+        <Button size={'extra'} disabled={true}>extra</Button>
+      </div>
     </div>
   )
 }

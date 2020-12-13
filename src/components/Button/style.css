@@ -5,6 +5,11 @@
   cursor: pointer;
 }
 
+.Button.disabled, .Button:disabled {
+  pointer-events: none;
+  opacity: .65;
+}
+
 .Button--primary {
   color: #fff;
   background-color: #0d6efd;
