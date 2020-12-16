@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Button from "./components/Button/Button";
 import ButtonsGroup from "./components/ButtonsGroup/ButtonsGroup";
+import Progress from "./components/Progress/Progress";
 
 const App = () => {
   return (
@@ -39,6 +40,11 @@ const App = () => {
           <Button>Rigth</Button>
         </ButtonsGroup>
       </div> 
+      <div>
+        <h2>Progress bar</h2>
+        <Progress percent={10} />
+      </div>
+
     </div>
   )
 }
