@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
 import './style.css';
 
 const ButtonsGroup = ({ children }) => {
+  const [activeBtn, setActiveBtn] = useState(1)
+
   return (
     <div className="ButtonsGroup">
-      {React.Children.map(children, (child) => (
+      {React.Children.map(children, (child, i) => (
         React.cloneElement(
           child,
-          { className: 'ButtonsGroup__item'}
+          { 
+            className: cn('ButtonsGroup__item', {'ButtonsGroup__item_active': i === activeBtn}),
+            onClick: () => {setActiveBtn(i)}
+          }
         )
       ))}
     </div>
