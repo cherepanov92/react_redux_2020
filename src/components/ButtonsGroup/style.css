@@ -1,0 +1,12 @@
+.ButtonsGroup {
+  display: flex;
+  align-items: baseline;
+}
+
+.ButtonsGroup__item {
+  border-radius: 0;
+}
+
+.ButtonsGroup__item_active {
+  border-color: black;
+}
